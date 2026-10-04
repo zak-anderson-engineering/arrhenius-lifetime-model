@@ -1,5 +1,3 @@
-# arrhenius-lifetime-model
-Arrhenius-based lifetime prediction from accelerated ageing data, with bootstrap uncertainty
 # Arrhenius Ageing and Lifetime Prediction Model
 
 Predicts the service lifetime of a material from accelerated ageing data at high temperatures, using the Arrhenius equation to extrapolate down to service temperature. Includes bootstrap uncertainty analysis and a parameter recovery study to validate the method.
@@ -25,7 +23,7 @@ The exponential fits match the data at all four temperatures, and the rates fall
 ### Bootstrap uncertainty
 ![Bootstrap](figures/bootstrap.png)
 
-The predicted lifetime at 70 °C is about 39 years (95% CI roughly 35–43 years), which contains the true lifetime of 42.6 years. The true Ea of 100 kJ/mol fell just outside its 95% interval, which led to the recovery study below.
+The predicted lifetime at 70 °C has a median of 39.3 years (95% CI 35.2–42.8 years), which contains the true lifetime of 42.6 years. The activation energy has a median of 98.4 kJ/mol (95% CI 96.2–99.9 kJ/mol), so the true value of 100 kJ/mol fell just outside its interval, which led to the recovery study below.
 
 ### Parameter recovery
 ![Parameter recovery](figures/parameter_recovery.png)
