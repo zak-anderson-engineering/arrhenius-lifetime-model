@@ -18,7 +18,7 @@ def fit_rates(df):
     """Fit the degradation rate k at each temperature (non-linear least squares)."""
     temps, ks, k_errs = [], [], []
     for T_C, group in df.groupby("temperature_C"):
-        popt, pcov = curve_fit(decay, group["time_h"], group["retention"], p0=[1e-3])
+        popt, pcov = curve_fit(decay, group["time_h"], group["retention"], p0=[1e-3], bounds=(0, np.inf))
         temps.append(T_C)
         ks.append(popt[0])
         k_errs.append(np.sqrt(pcov[0, 0]))
